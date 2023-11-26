@@ -1,0 +1,23 @@
+{
+  "name": "namastereact",
+  "version": "1.0.0",
+  "description": "this is namaste-react course work",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwf0520/namaste-react.git"
+  },
+  "keywords": [
+    "react",
+    "namaste"
+  ],
+  "author": "John Fowler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwf0520/namaste-react/issues"
+  },
+  "homepage": "https://github.com/jwf0520/namaste-react#readme"
+}
