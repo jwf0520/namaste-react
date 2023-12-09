@@ -2,8 +2,9 @@
   "name": "namastereact",
   "version": "1.0.0",
   "description": "this is namaste-react course work",
-  "main": "index.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -19,5 +20,16 @@
   "bugs": {
     "url": "https://github.com/jwf0520/namaste-react/issues"
   },
-  "homepage": "https://github.com/jwf0520/namaste-react#readme"
+  "homepage": "https://github.com/jwf0520/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }

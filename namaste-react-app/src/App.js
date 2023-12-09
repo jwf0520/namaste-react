@@ -1,13 +1,93 @@
-const heading = React.createElement("h1", {id: "heading"}, "Hello World from React FU");
-const root = ReactDOM.createRoot(document.getElementById("root"));
+import React from "react";
+import reactDom from "react-dom/client";
 
-const innerChild1 = React.createElement("h1", {style: {color: "red" }}, "I'm an h1 element");
-const innerChild2 = React.createElement("h2", {style: {color: "blue"}}, "I'm an h2 element");
+/**
+ * Header
+ *  - logo
+ *  - nav items
+ * Body
+ *  - search box
+ *  - search button
+ *  - restaurant container
+ *    -restaurant card
+ *      - img
+ *      - name of restaurant, star rating, cuisines, delivery ETA
+ * Footer
+ *  - copyright
+ *  - links
+ *  - contact info
+ */
 
+//reactDOM.createRoot grab an element on the page and then interact with it
+const root = reactDom.createRoot(document.getElementById("root"));
 
-const child1 = React.createElement("div", {id: "child1"}, [innerChild1, innerChild2]);
-const child2 = React.createElement("div", {id: "child2"}, [innerChild1, innerChild2]);
-const parent = React.createElement("div", {id: "parent"}, [child1, child2]);
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://i.pinimg.com/originals/23/ea/f7/23eaf73a1787621248279492ecbfb43f.png"
+        />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-//root.render(heading);
-root.render(parent);
+const styleCard = {
+  backgroundColor: "gray",
+};
+
+const RestaurantCard = () => {
+  return (
+    <div className="restaurant-card" style={{ backgroundColor: "gray" }}>
+      <img
+        className="restaurant-card-logo"
+        src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2018/09/1862/1046/steak-istock.jpg?ve=1&tl=1"
+      />
+      <h2>JDs House of Beef</h2>
+      <h3>Steak, Butter, Eggs</h3>
+      <h4>5.1 Stars</h4>
+      <h4>45 mins</h4>
+    </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search"></div>
+      <div className="restaurant-container">
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+      </div>
+    </div>
+  );
+};
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      <Body />
+    </div>
+  );
+};
+
+//functional components are in angular brackets
+root.render(<AppLayout />);
